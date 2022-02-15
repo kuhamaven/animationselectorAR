@@ -17,7 +17,7 @@
 <body>
   <!-- <model-viewer> HTML element -->
   <model-viewer id="demo" bounds="tight" src="RobotExpressive.glb" ar ar-modes="webxr scene-viewer quick-look"
-    camera-controls poster="poster.webp" shadow-intensity="1" autoplay animation-name="Wave" exposure="1.22">
+    camera-controls poster="poster.webp" shadow-intensity="1" autoplay animation-name="Standing" exposure="1.22">
     <div class="progress-bar hide" slot="progress-bar">
       <div class="update-bar"></div>
     </div>
@@ -27,11 +27,22 @@
     <div id="ar-prompt">
       <img src="ar_hand_prompt.png">
     </div>
-    <button id="hotspotButton" slot="hotspot-one" data-position="..." data-normal="...">Change Animation</button>
+    <button id="hotspotButton" slot="hotspot-one" data-position="..." data-normal="..." onclick="">Change
+      Animation</button>
   </model-viewer>
   <script src="script.js">
     const myObj = { firsname: "John", lastname: "Doe" };
     console.log(myObj);
+
+    function change_animation() {
+      if (demo.animationName === 'Running') {
+        demo.animationName = 'Wave';
+        console.log('Wave');
+      } else {
+        demo.animationName = 'Running';
+        console.log('Running');
+      }
+    }
 
     console.log('Test');
     hotspotButton.addEventListener('click', () => {
