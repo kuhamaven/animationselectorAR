@@ -24,11 +24,9 @@
     <div id="ar-prompt">
       <img src="ar_hand_prompt.png">
     </div>
-    <button id="hotspotButton" slot="hotspot-one" data-position="..." data-normal="...">Hotspot</button>
+    <button id="hotspotButton" slot="hotspot-one" data-position="..." data-normal="...">Change animation</button>
   </model-viewer>
-  <script src="script.js"></script>
-  <!-- Loads <model-viewer> for browsers: -->
-  <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js">
+  <script src="script.js">
     hotspotButton.addEventListener('click', () => {
       if (demo.animationName === 'Running') {
         demo.animationName = 'Wave';
@@ -36,6 +34,10 @@
         demo.animationName = 'Running';
       }
     });
+  </script>
+  <!-- Loads <model-viewer> for browsers: -->
+  <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js">
+    
   </script>
   <button>
 
