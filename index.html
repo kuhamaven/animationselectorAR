@@ -8,7 +8,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link type="text/css" href="./styles.css" rel="stylesheet" />
   <!-- OPTIONAL: The :focus-visible polyfill removes the focus ring for some input types -->
-  <script src="https://unpkg.com/focus-visible@5.0.2/dist/focus-visible.js" defer></script>
+  <script src="https://unpkg.com/focus-visible@5.0.2/dist/focus-visible.js" defer>
+    const myObj = { firsname: "Nonsense", lastname: "Doe" };
+    console.log(myObj);
+  </script>
 </head>
 
 <body>
@@ -27,6 +30,9 @@
     <button id="hotspotButton" slot="hotspot-one" data-position="..." data-normal="...">Change Animation</button>
   </model-viewer>
   <script src="script.js">
+    const myObj = { firsname: "John", lastname: "Doe" };
+    console.log(myObj);
+
     console.log('Test');
     hotspotButton.addEventListener('click', () => {
       if (demo.animationName === 'Running') {
@@ -40,7 +46,8 @@
   </script>
   <!-- Loads <model-viewer> for browsers: -->
   <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js">
-    
+    const myObj = { firsname: "Juan", lastname: "Doe" };
+    console.log(myObj);
   </script>
   <button>
 
