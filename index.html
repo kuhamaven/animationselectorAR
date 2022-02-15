@@ -8,10 +8,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link type="text/css" href="./styles.css" rel="stylesheet" />
   <!-- OPTIONAL: The :focus-visible polyfill removes the focus ring for some input types -->
-  <script src="https://unpkg.com/focus-visible@5.0.2/dist/focus-visible.js" defer>
-    const myObj = { firsname: "Nonsense", lastname: "Doe" };
-    console.log(myObj);
-  </script>
+  <script src="https://unpkg.com/focus-visible@5.0.2/dist/focus-visible.js" defer>  </script>
 </head>
 
 <body>
@@ -27,22 +24,22 @@
     <div id="ar-prompt">
       <img src="ar_hand_prompt.png">
     </div>
-    <button id="hotspotButton" slot="hotspot-one" data-position="..." data-normal="..." onclick="change_animation()">Change</button>
+    <button id="hotspotButton" slot="hotspot-one" data-position="..." data-normal="..."
+      onclick="change_animation()">Change</button>
+
+    <script>
+      function change_animation() {
+        if (demo.animationName === 'Running') {
+          demo.animationName = 'Wave';
+          console.log('Wave');
+        } else {
+          demo.animationName = 'Running';
+          console.log('Running');
+        }
+      }
+    </script>
   </model-viewer>
   <script src="script.js">
-    const myObj = { firsname: "John", lastname: "Doe" };
-    console.log(myObj);
-
-    function change_animation() {
-      if (demo.animationName === 'Running') {
-        demo.animationName = 'Wave';
-        console.log('Wave');
-      } else {
-        demo.animationName = 'Running';
-        console.log('Running');
-      }
-    }
-
     console.log('Test');
     hotspotButton.addEventListener('click', () => {
       if (demo.animationName === 'Running') {
@@ -55,10 +52,7 @@
     });
   </script>
   <!-- Loads <model-viewer> for browsers: -->
-  <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js">
-    const myObj = { firsname: "Juan", lastname: "Doe" };
-    console.log(myObj);
-  </script>
+  <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js">  </script>
   <button>
 
   </button>
