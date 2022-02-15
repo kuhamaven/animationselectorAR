@@ -25,7 +25,9 @@
       <img src="ar_hand_prompt.png">
     </div>
   </model-viewer>
-  <script src="script.js">
+  <script src="script.js"></script>
+  <!-- Loads <model-viewer> for browsers: -->
+  <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js">
     (() => {
       const modelViewer = document.querySelector('#demo');
 
@@ -35,8 +37,6 @@
       }, 1500.0);
     })();
   </script>
-  <!-- Loads <model-viewer> for browsers: -->
-  <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
 </body>
 
 </html>
